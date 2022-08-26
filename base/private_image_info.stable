@@ -1,0 +1,194 @@
+[
+    {
+        "Id": "sha256:3ccafaa23ca728c8899b42eb67625bb8ad93b991ea77403827ea81a946b99db2",
+        "RepoTags": [
+            "quay.io/abiramidhayalan/ucsls-compiler:stable-opf"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:f788c22cd38ee5363d7bc664d40057b233db1f270eb764073daba3a0bed5b7ad",
+        "Comment": "",
+        "Created": "2022-08-26T21:46:31.821763236Z",
+        "Container": "dd30e06773a0b78a555d6d24b8b0ce693e85cb540f299f204ee4c0e43435c499",
+        "ContainerConfig": {
+            "Hostname": "dd30e06773a0",
+            "Domainname": "",
+            "User": "1000",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8888/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CONDA_DIR=/opt/conda",
+                "SHELL=/bin/bash",
+                "NB_USER=jovyan",
+                "NB_UID=1000",
+                "NB_GID=100",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "HOME=/home/jovyan",
+                "XDG_CACHE_HOME=/home/jovyan/.cache/",
+                "OPE_UID=1000700000",
+                "OPE_GID=0",
+                "OPE_GROUP=root",
+                "NB_GROUP=root",
+                "USER=jovyan"
+            ],
+            "Cmd": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-c",
+                "#(nop) ",
+                "USER 1000"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget -O- --no-verbose --tries=1 --no-check-certificate     http${GEN_CERT:+s}://localhost:8888${JUPYTERHUB_SERVICE_PREFIX:-/}api || exit 1"
+                ],
+                "Interval": 15000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 5000000000,
+                "Retries": 3
+            },
+            "ArgsEscaped": true,
+            "Image": "sha256:f788c22cd38ee5363d7bc664d40057b233db1f270eb764073daba3a0bed5b7ad",
+            "Volumes": null,
+            "WorkingDir": "/home/jovyan",
+            "Entrypoint": [
+                "tini",
+                "-g",
+                "--"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "Open Education <opeffort@gmail.com>"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-c"
+            ]
+        },
+        "DockerVersion": "20.10.17",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "1000",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8888/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CONDA_DIR=/opt/conda",
+                "SHELL=/bin/bash",
+                "NB_USER=jovyan",
+                "NB_UID=1000",
+                "NB_GID=100",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "HOME=/home/jovyan",
+                "XDG_CACHE_HOME=/home/jovyan/.cache/",
+                "OPE_UID=1000700000",
+                "OPE_GID=0",
+                "OPE_GROUP=root",
+                "NB_GROUP=root",
+                "USER=jovyan"
+            ],
+            "Cmd": [
+                "start-notebook.sh"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget -O- --no-verbose --tries=1 --no-check-certificate     http${GEN_CERT:+s}://localhost:8888${JUPYTERHUB_SERVICE_PREFIX:-/}api || exit 1"
+                ],
+                "Interval": 15000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 5000000000,
+                "Retries": 3
+            },
+            "ArgsEscaped": true,
+            "Image": "sha256:f788c22cd38ee5363d7bc664d40057b233db1f270eb764073daba3a0bed5b7ad",
+            "Volumes": null,
+            "WorkingDir": "/home/jovyan",
+            "Entrypoint": [
+                "tini",
+                "-g",
+                "--"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "Open Education <opeffort@gmail.com>"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-c"
+            ]
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 6174656368,
+        "VirtualSize": 6174656368,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "btrfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:af7ed92504ae4c20128a0f01048d41d467fef5c795c38d0defdb998a187ed1d4",
+                "sha256:6c0c687aff8e5d862b94a7d1453fab59796390108140dabe45564fa20c523b20",
+                "sha256:63a24d03b35bb69188290054d051719a08305c6287e0a99bd3a298267a4ff83a",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:673864f4da16e47fa0308cdef21f77d14e6fa3648ea5d0a5aeaf6dd8d68ebb44",
+                "sha256:83dd6d6339c1427b6c4465e870e3bf5fbcf0a9dd316dd7da1b6251758e3d557b",
+                "sha256:df57ddce6e0cdbfe67dd35ff9764bfffdd4d0dcfdbf4c63eabd3fb23cda3bd59",
+                "sha256:57ac9bbb0c9e9ba1bb61946ae131eb0636dae77325a6d132a0e1d78548dbf624",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:ea4715c6eb86a4a4c865d5385fd7e4c318309a6e625fd785f045b325926de5d0",
+                "sha256:c2adb659ec2524cb602d809a6e0f66bbe2c87c62b6b575778ff439bd45ce4480",
+                "sha256:8fb25916f0c7b2a714bf6e6fea303151a7cdd80f32c980b8cc9cab7af7a94db1",
+                "sha256:1e0166621d3cafa4b6d57d4f28f3818261c3641768dc4141cb52a8f807b373e2",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:278cc19db7112d9ad77d1e2732c2995e6c17d65c3986ec731d6c80e76f8dd7a1",
+                "sha256:cee974a12d2b4dc332c4895895e4b94f6a11be2bcca096277607f7f20a82e4b6",
+                "sha256:e315d57f0650607798b3414de72b9429006c070a8da446e53358c8d13eb1601f",
+                "sha256:2421696479ea69c17e707a947fbd4b0dee54dabe284f4867609a98ffa3380b6d",
+                "sha256:0afe619ff1d6d554922526650858e99fc2d1abcf66e77f6fa66c080d1c5bef54",
+                "sha256:518d50a6bbe490b697fee83c3d80fa7087e3989904969cef80440fae215f376b",
+                "sha256:8ea00670b55f7e6b65f74868fcd4bdf8a360ce37b5fd03ef619bbea4ef3c1d79",
+                "sha256:2d9a93ccc5842fb6197c3165bf34e4208e7bd0d2f9b06ddc82f040edcb88769a",
+                "sha256:1f2d94f6708788c2ba4977096ae48e6d9420424bab377476be2131f87295ce3a",
+                "sha256:95355d1bb06d76c3dc228726a2ed35bc6149bf08df38f746c68fb57cd40dc033",
+                "sha256:7f050cd34c083249bae2edf20414ae7741c815aaf7f1e8c5ee48e2e774e33b7b",
+                "sha256:c59ef7ec93dc542f538f6a1de1884fa797a629f099078a7f268325b6187d5a38",
+                "sha256:cfa0ab84a7d4450790a5a83f110bae2fe8865b8f1f218bafe700f17bd9c0d06f",
+                "sha256:b7ff86304f59dda7fa8d54eb24d22d7a62d31b351a80bd64a9a69736ce1bea80"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2022-08-26T17:46:36.446184657-04:00"
+        }
+    }
+]
