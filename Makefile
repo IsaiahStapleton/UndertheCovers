@@ -46,8 +46,8 @@ PUBLIC_TEST_TAG := :test-$(CUST)
 BASE_DISTRO_PACKAGES := $(shell cat base/distro_pkgs)
 
 # use recursive assignment to defer execution until we have mamba versions made
-PYTHON_PREREQ_VERSIONS_STABLE =  $(shell cat base/python_prereqs)
-PYTHON_INSTALL_PACKAGES_STABLE = $(shell cat base/python_pkgs)
+PYTHON_PREREQ_VERSIONS_STABLE =  $(shell cat base/python_prereqs )
+PYTHON_INSTALL_PACKAGES_STABLE = $(shell cat base/python_pkgs )
 
 PYTHON_PREREQ_VERSIONS_TEST := 
 PYTHON_INSTALL_PACKAGES_TEST := $(shell cat base/python_pkgs)
@@ -123,9 +123,9 @@ base/private_image_info.$(VERSION):
 base/aarch64vm/README.md:
 	cd base && wget -O - ${ARCH64VMTGZ} | tar -zxf -
 
-build-compiler: base/aarch64vm/README.md
-build-compiler: IMAGE = $(PRIVATE_IMAGE)
-build-compiler: DARGS ?= --build-arg FROM_REG=$(BASE_REG) \
+build: base/aarch64vm/README.md
+build: IMAGE = $(PRIVATE_IMAGE)
+build: DARGS ?= --build-arg FROM_REG=$(BASE_REG) \
                    --build-arg FROM_IMAGE=$(BASE_IMAGE) \
                    --build-arg FROM_TAG=$(BASE_TAG) \
                    --build-arg OPE_UID=$(OPE_UID) \
@@ -134,9 +134,11 @@ build-compiler: DARGS ?= --build-arg FROM_REG=$(BASE_REG) \
                    --build-arg ADDITIONAL_DISTRO_PACKAGES="$(BASE_DISTRO_PACKAGES)" \
                    --build-arg PYTHON_PREREQ_VERSIONS="$(PYTHON_PREREQ_VERSIONS)" \
                    --build-arg PYTHON_INSTALL_PACKAGES="$(PYTHON_INSTALL_PACKAGES)" \
+                   --build-arg JUPYTER_ENABLE_EXTENSIONS="$(JUPYTER_ENABLE_EXTENSIONS)" \
+                   --build-arg JUPYTER_DISABLE_EXTENSIONS="$(JUPYTER_DISABLE_EXTENSIONS)" \
                    --build-arg GDB_BUILD_SRC=$(GDB_BUILD_SRC) \
                    --build-arg UNMIN=$(UNMIN)
-build-compiler: ## Make the image customized appropriately
+build: ## Make the image customized appropriately
 	docker build $(DARGS) $(DCACHING) --rm --force-rm -t $(PRIVATE_REG)$(IMAGE)$(PRIVATE_TAG) base
 	-rm base/private_mamba_versions.$(VERSION)
 	make base/private_mamba_versions.$(VERSION)
