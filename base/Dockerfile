@@ -129,7 +129,7 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
 # copy overrides.json
 COPY settings ${CONDA_DIR}/share/jupyter/lab/settings
 
-RUN jupyter server extension enable rise && \
+RUN cd /home/RISE && jupyter server extension enable rise && \
  jupyter serverextension enable rise && \
  jupyter labextension develop --overwrite . && \
  jupyter-nbextension install rise --py --sys-prefix --symlink && \
