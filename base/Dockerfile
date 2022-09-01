@@ -74,13 +74,14 @@ RUN  wget -O - https://dl.yarnpkg.com/debian/pubkey.gpg 2> /dev/null | sudo apt-
      apt-get clean && rm -rf /var/lib/apt/lists/*
 
 USER $NB_USER
-# last work by Yiqin has been merged into Fcollnval's fork that seems to be the
-# main place the work for lab support is going switched over to using his fork
-RUN  git clone https://github.com/fcollonval/RISE.git -b ft/jlab3  /home/RISE  && \
-     cd /home/RISE && \
-     yarn install && \
-     yarn run build && \
-     pip install -e . 
+
+# swtiched back to Yiqin's branch to pickup fixes for toggling controls and notes
+RUN git clone https://github.com/OPEFFORT/RISE.git /home/RISE  && \
+ cd /home/RISE && \
+ git checkout dev && \
+ yarn install && \
+ yarn run build && \
+ pip install -e .
 
 ## Dockerfile for constructing the base Open Education Effort (OPE)
 ## container.  This container contains everything required for authoring OPE courses
@@ -127,6 +128,13 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
 
 # copy overrides.json
 COPY settings ${CONDA_DIR}/share/jupyter/lab/settings
+
+RUN jupyter server extension enable rise && \
+ jupyter serverextension enable rise && \
+ jupyter labextension develop --overwrite . && \
+ jupyter-nbextension install rise --py --sys-prefix --symlink && \
+ jupyter-nbextension enable rise --py --sys-prefix && \
+ rm -rf /tmp/yarn* /tmp/nodejs* /tmp/npm* /tmp/v8*
 
 USER root
 
