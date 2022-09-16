@@ -3,8 +3,11 @@
         "Id": "sha256:e30bcec52c636255faa4616dcf84fd9851c0d57f9086fe3cd770c8bea7c3173d",
         "RepoTags": [
             "quay.io/abiramidhayalan/ucsls:stable-opf",
+            "quay.io/rh_ee_adhayala/ucsls:stable-base",
             "quay.io/rh_ee_adhayala/ucsls:stable-opf",
-            "quay.io/ucsls/ucsls:stable-opf_09.06.22_15.47.06"
+            "quay.io/rh_ee_adhayala/ucsls:stable-opf_09.06.22_15.55.25",
+            "quay.io/ucsls/ucsls:stable-opf_09.06.22_15.47.06",
+            "quay.io/ucsls/ucsls:stable-opf_09.06.22_15.54.05"
         ],
         "RepoDigests": [
             "quay.io/rh_ee_adhayala/ucsls@sha256:6fb45e7b5e84342fdc156a18030975a090212b3ea6ef8077a7cb4f5f1cdd8487"
@@ -195,7 +198,7 @@
             ]
         },
         "Metadata": {
-            "LastTagTime": "2022-09-06T15:53:32.812963203-04:00"
+            "LastTagTime": "2022-09-14T16:43:54.587707816-04:00"
         }
     }
 ]

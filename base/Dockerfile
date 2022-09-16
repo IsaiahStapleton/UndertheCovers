@@ -200,6 +200,4 @@ RUN /usr/local/bin/start.sh true; \
 COPY start-notebook.d /usr/local/bin/start-notebook.d
 
 ENV USER=$NB_USER
-
-USER ${NB_UID}
-
+USER $NB_USER

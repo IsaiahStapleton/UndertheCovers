@@ -1,22 +1,18 @@
 [
     {
-        "Id": "sha256:e30bcec52c636255faa4616dcf84fd9851c0d57f9086fe3cd770c8bea7c3173d",
+        "Id": "sha256:8dbc8dccdfae3c841429f0b90de35c2eb95367c52d09c30ade88407f51e4f9cd",
         "RepoTags": [
-            "quay.io/abiramidhayalan/ucsls:stable-opf",
-            "quay.io/rh_ee_adhayala/ucsls:stable-opf",
-            "quay.io/ucsls/ucsls:stable-opf_09.06.22_15.47.06"
+            "quay.io/rh_ee_adhayala/ucsls:stable-base"
         ],
-        "RepoDigests": [
-            "quay.io/rh_ee_adhayala/ucsls@sha256:6fb45e7b5e84342fdc156a18030975a090212b3ea6ef8077a7cb4f5f1cdd8487"
-        ],
+        "RepoDigests": [],
         "Parent": "sha256:5f5dd9c46ce20f23ebfeed16e35668bd3fb591ff7bad81c507709c38b10606ad",
         "Comment": "",
-        "Created": "2022-09-01T17:13:15.348649199Z",
-        "Container": "711d6e7bea07d4e2c03ca5c65d5e46a54d85abcab6fb37f270bda090aa1f7852",
+        "Created": "2022-09-14T21:08:35.761884135Z",
+        "Container": "fdb72e8f03bc0bf8150c61467bd217c56861d010f920125b11fc40f8bf0a8f09",
         "ContainerConfig": {
-            "Hostname": "711d6e7bea07",
+            "Hostname": "fdb72e8f03bc",
             "Domainname": "",
-            "User": "1000",
+            "User": "jovyan",
             "AttachStdin": false,
             "AttachStdout": false,
             "AttachStderr": false,
@@ -51,7 +47,7 @@
                 "pipefail",
                 "-c",
                 "#(nop) ",
-                "USER 1000"
+                "USER jovyan"
             ],
             "Healthcheck": {
                 "Test": [
@@ -88,7 +84,7 @@
         "Config": {
             "Hostname": "",
             "Domainname": "",
-            "User": "1000",
+            "User": "jovyan",
             "AttachStdin": false,
             "AttachStdout": false,
             "AttachStderr": false,
@@ -195,7 +191,7 @@
             ]
         },
         "Metadata": {
-            "LastTagTime": "2022-09-06T15:53:32.812963203-04:00"
+            "LastTagTime": "2022-09-14T17:08:39.262258518-04:00"
         }
     }
 ]

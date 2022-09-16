@@ -46,8 +46,8 @@ PUBLIC_TEST_TAG := :test-$(CUST)
 BASE_DISTRO_PACKAGES := $(shell cat base/distro_pkgs)
 
 # use recursive assignment to defer execution until we have mamba versions made
-PYTHON_PREREQ_VERSIONS_STABLE =  $(shell cat base/python_prereqs )
-PYTHON_INSTALL_PACKAGES_STABLE = $(shell cat base/python_pkgs )
+PYTHON_PREREQ_VERSIONS_STABLE =  $(shell cat base/python_prereqs | base/mkversions)
+PYTHON_INSTALL_PACKAGES_STABLE = $(shell cat base/python_pkgs | base/mkversions)
 
 PYTHON_PREREQ_VERSIONS_TEST := 
 PYTHON_INSTALL_PACKAGES_TEST := $(shell cat base/python_pkgs)
