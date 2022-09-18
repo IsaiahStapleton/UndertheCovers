@@ -18,6 +18,8 @@ ARG PYTHON_PREREQ_VERSIONS
 ARG PYTHON_INSTALL_PACKAGES
 ARG GDB_BUILD_SRC
 ARG UNMIN
+ARG NB_UID=${OPE_UID}
+ENV NB_UID=${NB_UID}
 
 # Fix: https://github.com/hadolint/hadolint/wiki/DL4006
 # Fix: https://github.com/koalaman/shellcheck/wiki/SC3014

@@ -46,8 +46,8 @@ PUBLIC_TEST_TAG := :test-$(CUST)
 BASE_DISTRO_PACKAGES := $(shell cat base/distro_pkgs)
 
 # use recursive assignment to defer execution until we have mamba versions made
-PYTHON_PREREQ_VERSIONS_STABLE =  $(shell cat base/python_prereqs)
-PYTHON_INSTALL_PACKAGES_STABLE = $(shell cat base/python_pkgs)
+PYTHON_PREREQ_VERSIONS_STABLE =  $(shell cat base/python_prereqs  | base/mkversions)
+PYTHON_INSTALL_PACKAGES_STABLE = $(shell cat base/python_pkgs  | base/mkversions)
 
 PYTHON_PREREQ_VERSIONS_TEST := 
 PYTHON_INSTALL_PACKAGES_TEST := $(shell cat base/python_pkgs)
@@ -192,14 +192,6 @@ root: TAG = $(PRIVATE_TAG)
 root: ARGS ?= /bin/bash
 root: DARGS ?= -u 0
 root: ## start private version  with root shell to do admin and poke around
-	-docker run -it --rm $(DARGS) $(REG)$(IMAGE)$(TAG) $(ARGS)
-
-ope: IMAGE = $(PRIVATE_IMAGE)
-ope: REG = $(PRIVATE_REG)
-ope: TAG = $(PRIVATE_TAG)
-ope: ARGS ?= /bin/bash
-ope: DARGS ?=
-ope: ## start privae version with root shell to do admin and poke around
 	-docker run -it --rm $(DARGS) $(REG)$(IMAGE)$(TAG) $(ARGS)
 
 user: IMAGE = $(PRIVATE_IMAGE)

@@ -1,16 +1,16 @@
 [
     {
-        "Id": "sha256:b38d80d964dd7277c4656793814a7ee41b1717908c40e5a4ca29e9c5bace0108",
+        "Id": "sha256:12c75fc2a4158e50ffdf824686aada5bb8f9d97c4f66cfb985b93af2f7f9bad9",
         "RepoTags": [
             "quay.io/rh_ee_adhayala/ucsls:stable-base"
         ],
         "RepoDigests": [],
-        "Parent": "sha256:c99f1bf232bf40b93dcdc74aa2e89fef7ba8080f647d8f1b465ba3764d66b0eb",
+        "Parent": "sha256:9af318e8354ae336132c63a91868df74ee14a2329a25fb54ce0bbced9f1fe981",
         "Comment": "",
-        "Created": "2022-09-16T22:29:50.127037396Z",
-        "Container": "ced65bcd34e4fa87902788b5ed0f3556a450818f1f7b8f70cb0c0f290b30279a",
+        "Created": "2022-09-18T14:46:28.754651299Z",
+        "Container": "001685f773fb8d682af58c2c9895641e719e5e157454818535060a7f66257b3f",
         "ContainerConfig": {
-            "Hostname": "ced65bcd34e4",
+            "Hostname": "001685f773fb",
             "Domainname": "",
             "User": "jovyan",
             "AttachStdin": false,
@@ -60,7 +60,7 @@
                 "Retries": 3
             },
             "ArgsEscaped": true,
-            "Image": "sha256:c99f1bf232bf40b93dcdc74aa2e89fef7ba8080f647d8f1b465ba3764d66b0eb",
+            "Image": "sha256:9af318e8354ae336132c63a91868df74ee14a2329a25fb54ce0bbced9f1fe981",
             "Volumes": null,
             "WorkingDir": "/home/jovyan",
             "Entrypoint": [
@@ -127,7 +127,7 @@
                 "Retries": 3
             },
             "ArgsEscaped": true,
-            "Image": "sha256:c99f1bf232bf40b93dcdc74aa2e89fef7ba8080f647d8f1b465ba3764d66b0eb",
+            "Image": "sha256:9af318e8354ae336132c63a91868df74ee14a2329a25fb54ce0bbced9f1fe981",
             "Volumes": null,
             "WorkingDir": "/home/jovyan",
             "Entrypoint": [
@@ -148,8 +148,8 @@
         },
         "Architecture": "amd64",
         "Os": "linux",
-        "Size": 6235627446,
-        "VirtualSize": 6235627446,
+        "Size": 6235624141,
+        "VirtualSize": 6235624141,
         "GraphDriver": {
             "Data": null,
             "Name": "btrfs"
@@ -173,25 +173,25 @@
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
                 "sha256:278cc19db7112d9ad77d1e2732c2995e6c17d65c3986ec731d6c80e76f8dd7a1",
                 "sha256:cee974a12d2b4dc332c4895895e4b94f6a11be2bcca096277607f7f20a82e4b6",
-                "sha256:392d385e9d63ecc515d80d0763f00ead46acb58fc7a2c8f063131c67914f4ba6",
-                "sha256:c7343649b06eb3365279b8c8b232f1298bdeb78859b0ba115abe31bb64ed8f6c",
-                "sha256:b5d57a01dfbf52591c9f4400313da12b094b23e4261d298de86f02ccf3dd2804",
-                "sha256:af3c99521ee4d3f9776bc3b58ae9aabe2ebaa9fb651549abf1f5d595bdbef03a",
-                "sha256:7015738f4f81d281b53e86c7db0e806bf0f95ae7f88ae1b2faf79d027e593472",
-                "sha256:2ee1f4c403225d72bdf3a2d10e1238238b388257688c37552dd8268375659c17",
-                "sha256:355a659dfe4f91f28d75fb987be5c1ae970536656648cc3aaaa5a1fa44bfa77b",
-                "sha256:a850ae049aaa8f277a7705c1226b291553f34cfa7df125f5066d4e32a13e1d5a",
-                "sha256:7f51f2790f89e0ed404869a6d10111d35927aff1d25b33d6dc8122bfb21dbec8",
-                "sha256:d99d5d4f318bcd12e852713d6a60c73a662fef80ecb4548252401c72fa4d229a",
-                "sha256:a856ddb4d5f000b282034a3a0d1346cf8987186ceaa818e622270c6d882688ea",
-                "sha256:5adaf93ea4ab3b26b58c89c6718f1a83d0484330c97b0da3d624163942ddbeb0",
-                "sha256:89238be36bc96762087fd9147150b82d4e45c0d4ba5ae5fc5cd1d55b0a23d787",
-                "sha256:1e0f59b5bc1231d05d68ead214168d1147f1cc7bb9345903e7db3072831a3700",
-                "sha256:d9c6b578b699907b76d92df9e664a35b8c354fd2866d4fbd0f22bac988c05dad"
+                "sha256:0d35f967d6756ef0d2d3307daf4812f540cac55b57c3df657af08ed175f701ac",
+                "sha256:007a699f2e3a5b3425811930cb11c5b288f93dbef46346bcc492f89db067f3e4",
+                "sha256:e4e3aabcbf81bf12b5fec01a14bb57f843ecc82ebf8afc82c719b6a566057edc",
+                "sha256:c5b6cdf109996960092ea6cfaadbf9408c03ed35bf56ccee4c0316d99bed7328",
+                "sha256:76535aa88c9f32db8b5e3b941d103f16db5f5feec407b857c6f45016095777fb",
+                "sha256:31902c4c55f5706f8ff60ada37b38882e31ab4b351dde3d3d6451de3e9884730",
+                "sha256:581c23f81a7fb269841c47df3dff34e759366a03338235c867197fd1da5ff998",
+                "sha256:c957947335e26315e24515e1b12de9c49932a6ad5ceb192b5259300d24f8ba14",
+                "sha256:343293dcedc3c04a44fac8631072c3c2af018add216dbde9d0082b7f211a176f",
+                "sha256:083f34737c829aff4b706e966b4c8923489f420a3377547a9cb5a91b82ab868b",
+                "sha256:775f84612ed77cfed67c54d69051454893b1bda75d9e670e4f07007ce4b793c4",
+                "sha256:d9b5ef14521a36d12ec57cf3915c0e91c6b7fdd61e6d410df6ffc1a8afae7d54",
+                "sha256:eb776a055b9bf66c7ce2c4a116ef924e1f5e2f5e6f0d549f50d9ad343880d3f4",
+                "sha256:dcc05afaa46e6a586f1b7d22f02ccd96ec1455c6564699fb4d06bf28657ea6f1",
+                "sha256:0f9495c061a7fff0a4abb3651b9a257f466f70e30c496b1329927d28bd33decf"
             ]
         },
         "Metadata": {
-            "LastTagTime": "2022-09-16T18:29:53.88880086-04:00"
+            "LastTagTime": "2022-09-18T10:46:32.551137507-04:00"
         }
     }
 ]
