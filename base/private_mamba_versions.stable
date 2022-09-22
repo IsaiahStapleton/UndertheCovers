@@ -1,6 +1,3 @@
-
-
-
 # packages in environment at /opt/conda:
 #
 # Name                    Version                   Build  Channel
@@ -90,7 +87,7 @@ jedi                      0.18.1          py310hff52083_1    conda-forge
 jinja2                    3.1.2              pyhd8ed1ab_1    conda-forge
 jpeg                      9e                   h166bdaf_2    conda-forge
 json5                     0.9.5              pyh9f0ad1d_0    conda-forge
-jsonschema                4.6.1                    pypi_0    pypi
+jsonschema                3.2.0                    pypi_0    pypi
 jupyter-book              0.13.1             pyhd8ed1ab_0    conda-forge
 jupyter-cache             0.4.3              pyhd8ed1ab_0    conda-forge
 jupyter-server-mathjax    0.2.6              pyhc268e32_0    conda-forge
@@ -193,7 +190,7 @@ mysql-libs                8.0.30               h28c427c_1    conda-forge
 myst-nb                   0.13.2             pyhd8ed1ab_0    conda-forge
 myst-parser               0.15.2             pyhd8ed1ab_0    conda-forge
 nbclassic                 0.3.7              pyhd8ed1ab_0    conda-forge
-nbclient                  0.6.6                    pypi_0    pypi
+nbclient                  0.5.13                   pypi_0    pypi
 nbconvert                 6.5.0              pyhd8ed1ab_0    conda-forge
 nbconvert-core            6.5.0              pyhd8ed1ab_0    conda-forge
 nbconvert-pandoc          6.5.0              pyhd8ed1ab_0    conda-forge
