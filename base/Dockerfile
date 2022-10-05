@@ -103,6 +103,7 @@ LABEL maintainer="Open Education <opeffort@gmail.com>"
 ARG JUPYTER_ENABLE_EXTENSIONS
 ARG JUPYTER_DISABLE_EXTENSIONS
 ARG UNMIN
+ARG ADDITIONAL_DISTRO_PACKAGES
 
 # Fix: https://github.com/hadolint/hadolint/wiki/DL4006
 # Fix: https://github.com/koalaman/shellcheck/wiki/SC3014
@@ -137,6 +138,11 @@ RUN cd /home/RISE && jupyter server extension enable rise && \
  rm -rf /tmp/yarn* /tmp/nodejs* /tmp/npm* /tmp/v8*
 
 USER root
+
+RUN dpkg --add-architecture i386 && \
+    apt-get -y update --fix-missing && \
+    apt-get -y install ${ADDITIONAL_DISTRO_PACKAGES} && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # we want the container to feel more like a fully fledged system so we are pulling the trigger and unminimizing it
 RUN [[ $UNMIN == "yes" ]] &&  yes | unminimize || true

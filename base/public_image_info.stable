@@ -1,25 +1,18 @@
 [
     {
-        "Id": "sha256:e30bcec52c636255faa4616dcf84fd9851c0d57f9086fe3cd770c8bea7c3173d",
+        "Id": "sha256:003e0d8ce27196bf893aa7876199efc2fd1b063ec54d6c2fe76505217e0f481f",
         "RepoTags": [
-            "quay.io/abiramidhayalan/ucsls:stable-opf",
-            "quay.io/rh_ee_adhayala/ucsls:stable-base",
-            "quay.io/rh_ee_adhayala/ucsls:stable-opf",
-            "quay.io/rh_ee_adhayala/ucsls:stable-opf_09.06.22_15.55.25",
-            "quay.io/ucsls/ucsls:stable-opf_09.06.22_15.47.06",
-            "quay.io/ucsls/ucsls:stable-opf_09.06.22_15.54.05"
+            "quay.io/rh_ee_adhayala/ucsls:stable-base"
         ],
-        "RepoDigests": [
-            "quay.io/rh_ee_adhayala/ucsls@sha256:6fb45e7b5e84342fdc156a18030975a090212b3ea6ef8077a7cb4f5f1cdd8487"
-        ],
-        "Parent": "sha256:5f5dd9c46ce20f23ebfeed16e35668bd3fb591ff7bad81c507709c38b10606ad",
+        "RepoDigests": [],
+        "Parent": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
         "Comment": "",
-        "Created": "2022-09-01T17:13:15.348649199Z",
-        "Container": "711d6e7bea07d4e2c03ca5c65d5e46a54d85abcab6fb37f270bda090aa1f7852",
+        "Created": "2022-10-05T03:11:09.631073317Z",
+        "Container": "48784556b193d5eddd6bcce9f04dd8fdd1aa020bc78307bb066edf5b48de2ee2",
         "ContainerConfig": {
-            "Hostname": "711d6e7bea07",
+            "Hostname": "48784556b193",
             "Domainname": "",
-            "User": "1000",
+            "User": "jovyan",
             "AttachStdin": false,
             "AttachStdout": false,
             "AttachStderr": false,
@@ -35,7 +28,7 @@
                 "CONDA_DIR=/opt/conda",
                 "SHELL=/bin/bash",
                 "NB_USER=jovyan",
-                "NB_UID=1000",
+                "NB_UID=1000700000",
                 "NB_GID=100",
                 "LC_ALL=en_US.UTF-8",
                 "LANG=en_US.UTF-8",
@@ -54,7 +47,7 @@
                 "pipefail",
                 "-c",
                 "#(nop) ",
-                "USER 1000"
+                "USER jovyan"
             ],
             "Healthcheck": {
                 "Test": [
@@ -67,7 +60,7 @@
                 "Retries": 3
             },
             "ArgsEscaped": true,
-            "Image": "sha256:5f5dd9c46ce20f23ebfeed16e35668bd3fb591ff7bad81c507709c38b10606ad",
+            "Image": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
             "Volumes": null,
             "WorkingDir": "/home/jovyan",
             "Entrypoint": [
@@ -86,12 +79,12 @@
                 "-c"
             ]
         },
-        "DockerVersion": "20.10.17",
+        "DockerVersion": "20.10.18",
         "Author": "",
         "Config": {
             "Hostname": "",
             "Domainname": "",
-            "User": "1000",
+            "User": "jovyan",
             "AttachStdin": false,
             "AttachStdout": false,
             "AttachStderr": false,
@@ -107,7 +100,7 @@
                 "CONDA_DIR=/opt/conda",
                 "SHELL=/bin/bash",
                 "NB_USER=jovyan",
-                "NB_UID=1000",
+                "NB_UID=1000700000",
                 "NB_GID=100",
                 "LC_ALL=en_US.UTF-8",
                 "LANG=en_US.UTF-8",
@@ -134,7 +127,7 @@
                 "Retries": 3
             },
             "ArgsEscaped": true,
-            "Image": "sha256:5f5dd9c46ce20f23ebfeed16e35668bd3fb591ff7bad81c507709c38b10606ad",
+            "Image": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
             "Volumes": null,
             "WorkingDir": "/home/jovyan",
             "Entrypoint": [
@@ -155,8 +148,8 @@
         },
         "Architecture": "amd64",
         "Os": "linux",
-        "Size": 6174860377,
-        "VirtualSize": 6174860377,
+        "Size": 10784550256,
+        "VirtualSize": 10784550256,
         "GraphDriver": {
             "Data": null,
             "Name": "btrfs"
@@ -180,25 +173,26 @@
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
                 "sha256:278cc19db7112d9ad77d1e2732c2995e6c17d65c3986ec731d6c80e76f8dd7a1",
                 "sha256:cee974a12d2b4dc332c4895895e4b94f6a11be2bcca096277607f7f20a82e4b6",
-                "sha256:e315d57f0650607798b3414de72b9429006c070a8da446e53358c8d13eb1601f",
-                "sha256:2421696479ea69c17e707a947fbd4b0dee54dabe284f4867609a98ffa3380b6d",
-                "sha256:849cf1c9ab80bff6c33c4d19de4e6956d95a48a80cb820b139fa67c5c9ca686a",
-                "sha256:b0ac4996a1fa4db6a36965937fcbee5f02c18aae269839e3413d8c7a47d2758e",
-                "sha256:0cd340290325d972689743b2cb969beb91b91629f7040981f2b02ea9eff90902",
-                "sha256:9b0636f6822ef4014c9662ce1c65a31569cd00b7d1b6239c9ee0070dc3bcdd10",
-                "sha256:2cdbc2e7f0405dfda0c017150e24e864365cde7d2aa7f2f07163901b4a3a808e",
-                "sha256:acb69f366cd0e2df62f9a731e1626a9da7cc65bd2134b4adac5ba88a2582be8f",
-                "sha256:c190c7f508b3252953b143dc063785274a214a61fdb437b2e557b8c69119d2f0",
-                "sha256:200efb0779d4c0339fa14b98d45e783891163b6947ea6941624c60f1758aa18e",
-                "sha256:2d123c3ce9ef58690085554ff4d030e73647100a2ffd333eae0df2cd5d6236c3",
-                "sha256:30c826716b0d9ab73837d396c53673757ff19566049e00436acc36745c9b7794",
-                "sha256:4bf580a95016f3e8506df37fb6e991b7b0f267441e1b515174be07b54eecccda",
-                "sha256:f6a831dbeeaaecec1860d3ae7d581a879a13e286075f84202e8cec813134b010",
-                "sha256:1c28f69428ad1cf12e4944ffe6ea2603aa7798ee376f22f7836a5ab58489515c"
+                "sha256:392d385e9d63ecc515d80d0763f00ead46acb58fc7a2c8f063131c67914f4ba6",
+                "sha256:c7343649b06eb3365279b8c8b232f1298bdeb78859b0ba115abe31bb64ed8f6c",
+                "sha256:b5d57a01dfbf52591c9f4400313da12b094b23e4261d298de86f02ccf3dd2804",
+                "sha256:c728f6ff8a1fc535b5b7dd3aa605fb1e36c75cd63e9b44c7612303dd438de50c",
+                "sha256:27f717cda5eaef3367e26a222c5398af7b2e8ca17e12028313045b192b21526c",
+                "sha256:0ecf62f2844f38650300732584be10792cc817f35dbcc9ad006d86ef1ff7c56c",
+                "sha256:377b5b691a2fffe4566134c6ca2ae321a7cf06b59af73b00ac96ee3a582f25e2",
+                "sha256:95d454f5e79430f36093a629a73f2ed256fd5c5e43cffb7c6a92cef58edf165c",
+                "sha256:5affe277be8454cdd7526a5b6152847f95a14b6f7a0ffb7d142fbd63f5bacd2a",
+                "sha256:4d150b215a1f228953befb6c8ef4d2f1bb9af22f38c0171a20193717f89467c3",
+                "sha256:99644791696ecae768279339069bebc13dbc6e6f21971094ea16cd3e6c512eb3",
+                "sha256:c30489c25f8d572fec5745faf10ae83961c4ebdd608b4644fc12901424889bd7",
+                "sha256:c512e81e8603a839977d14789bc08687123d9ff880dce3e5b93c1224594f503d",
+                "sha256:5ee93e21d64b7bbbf8656686b839b67ce278b75c9c648ec33a84e8d734bb2764",
+                "sha256:a2f53d7fbaa1c657cde3a700a588e0245b3572aa43eba4e1920fd2f1c73fa0b4",
+                "sha256:dd89a96e6b814fb4a9668f5a531ad85d95820b1231a74d8d39c1c085042ab4e9"
             ]
         },
         "Metadata": {
-            "LastTagTime": "2022-09-14T16:43:54.587707816-04:00"
+            "LastTagTime": "2022-10-04T23:11:14.739457722-04:00"
         }
     }
 ]
