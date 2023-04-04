@@ -147,6 +147,31 @@ build: ## Make the image customized appropriately
 	-rm base/private_image_info.$(VERSION)
 	make base/private_image_info.$(VERSION)
 
+# Build with --no-cache flag
+build-nocache: base/aarch64vm/README.md
+build-nocache: IMAGE = $(PRIVATE_IMAGE)
+build-nocache: DARGS ?= --no-cache --build-arg FROM_REG=$(BASE_REG) \
+                   --build-arg FROM_IMAGE=$(BASE_IMAGE) \
+                   --build-arg FROM_TAG=$(BASE_TAG) \
+                   --build-arg OPE_UID=$(OPE_UID) \
+                   --build-arg OPE_GID=$(OPE_GID) \
+                   --build-arg OPE_GROUP=$(OPE_GROUP) \
+                   --build-arg ADDITIONAL_DISTRO_PACKAGES="$(BASE_DISTRO_PACKAGES)" \
+                   --build-arg PYTHON_PREREQ_VERSIONS="$(PYTHON_PREREQ_VERSIONS)" \
+                   --build-arg PYTHON_INSTALL_PACKAGES="$(PYTHON_INSTALL_PACKAGES)" \
+                   --build-arg JUPYTER_ENABLE_EXTENSIONS="$(JUPYTER_ENABLE_EXTENSIONS)" \
+                   --build-arg JUPYTER_DISABLE_EXTENSIONS="$(JUPYTER_DISABLE_EXTENSIONS)" \
+                   --build-arg GDB_BUILD_SRC=$(GDB_BUILD_SRC) \
+                   --build-arg UNMIN=$(UNMIN)
+build-nocache: ## Make the image customized appropriately
+	docker build $(DARGS) $(DCACHING) --rm --force-rm -t $(PRIVATE_REG)$(IMAGE)$(PRIVATE_TAG) base
+	-rm base/private_mamba_versions.$(VERSION)
+	make base/private_mamba_versions.$(VERSION)
+	-rm base/private_distro_versions.$(VERSION)
+	make base/private_distro_versions.$(VERSION)
+	-rm base/private_image_info.$(VERSION)
+	make base/private_image_info.$(VERSION)
+
 push: IMAGE = $(PRIVATE_IMAGE)
 push: DARGS ?=
 push: ## push private build

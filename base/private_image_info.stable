@@ -1,88 +1,35 @@
 [
     {
-        "Id": "sha256:003e0d8ce27196bf893aa7876199efc2fd1b063ec54d6c2fe76505217e0f481f",
+        "Id": "sha256:25fa8db52fb1e7142dab34c12b90c3b80fad6a5625ffa6262cd56e9137a02b3b",
         "RepoTags": [
-            "quay.io/rh_ee_adhayala/ucsls:stable-base_10.04.22_23.34.55",
-            "quay.io/rh_ee_adhayala/ucsls:stable-opf"
+            "quay.io/isaiahstapleton/base:stable-test24",
+            "quay.io/isaiahstapleton/base:stable-test25"
         ],
-        "RepoDigests": [
-            "quay.io/rh_ee_adhayala/ucsls@sha256:b51e67e2aed42a5bc48834fe0f14343462b37ad1a5d1a8f38fc6668a6b270cb5"
-        ],
-        "Parent": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
-        "Comment": "",
-        "Created": "2022-10-05T03:11:09.631073317Z",
-        "Container": "48784556b193d5eddd6bcce9f04dd8fdd1aa020bc78307bb066edf5b48de2ee2",
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2023-03-28T18:29:14.349436189-04:00",
+        "Container": "",
         "ContainerConfig": {
-            "Hostname": "48784556b193",
+            "Hostname": "",
             "Domainname": "",
-            "User": "jovyan",
+            "User": "",
             "AttachStdin": false,
             "AttachStdout": false,
             "AttachStderr": false,
-            "ExposedPorts": {
-                "8888/tcp": {}
-            },
             "Tty": false,
             "OpenStdin": false,
             "StdinOnce": false,
-            "Env": [
-                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-                "DEBIAN_FRONTEND=noninteractive",
-                "CONDA_DIR=/opt/conda",
-                "SHELL=/bin/bash",
-                "NB_USER=jovyan",
-                "NB_UID=1000700000",
-                "NB_GID=100",
-                "LC_ALL=en_US.UTF-8",
-                "LANG=en_US.UTF-8",
-                "LANGUAGE=en_US.UTF-8",
-                "HOME=/home/jovyan",
-                "XDG_CACHE_HOME=/home/jovyan/.cache/",
-                "OPE_UID=1000700000",
-                "OPE_GID=0",
-                "OPE_GROUP=root",
-                "NB_GROUP=root",
-                "USER=jovyan"
-            ],
-            "Cmd": [
-                "/bin/bash",
-                "-o",
-                "pipefail",
-                "-c",
-                "#(nop) ",
-                "USER jovyan"
-            ],
-            "Healthcheck": {
-                "Test": [
-                    "CMD-SHELL",
-                    "wget -O- --no-verbose --tries=1 --no-check-certificate     http${GEN_CERT:+s}://localhost:8888${JUPYTERHUB_SERVICE_PREFIX:-/}api || exit 1"
-                ],
-                "Interval": 15000000000,
-                "Timeout": 3000000000,
-                "StartPeriod": 5000000000,
-                "Retries": 3
-            },
-            "ArgsEscaped": true,
-            "Image": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
             "Volumes": null,
-            "WorkingDir": "/home/jovyan",
-            "Entrypoint": [
-                "tini",
-                "-g",
-                "--"
-            ],
+            "WorkingDir": "",
+            "Entrypoint": null,
             "OnBuild": null,
-            "Labels": {
-                "maintainer": "Open Education <opeffort@gmail.com>"
-            },
-            "Shell": [
-                "/bin/bash",
-                "-o",
-                "pipefail",
-                "-c"
-            ]
+            "Labels": null
         },
-        "DockerVersion": "20.10.18",
+        "DockerVersion": "",
         "Author": "",
         "Config": {
             "Hostname": "",
@@ -103,14 +50,14 @@
                 "CONDA_DIR=/opt/conda",
                 "SHELL=/bin/bash",
                 "NB_USER=jovyan",
-                "NB_UID=1000700000",
-                "NB_GID=100",
+                "NB_UID=1000",
+                "NB_GID=0",
                 "LC_ALL=en_US.UTF-8",
                 "LANG=en_US.UTF-8",
                 "LANGUAGE=en_US.UTF-8",
                 "HOME=/home/jovyan",
                 "XDG_CACHE_HOME=/home/jovyan/.cache/",
-                "OPE_UID=1000700000",
+                "OPE_UID=1000",
                 "OPE_GID=0",
                 "OPE_GROUP=root",
                 "NB_GROUP=root",
@@ -130,7 +77,7 @@
                 "Retries": 3
             },
             "ArgsEscaped": true,
-            "Image": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
+            "Image": "",
             "Volumes": null,
             "WorkingDir": "/home/jovyan",
             "Entrypoint": [
@@ -151,8 +98,8 @@
         },
         "Architecture": "amd64",
         "Os": "linux",
-        "Size": 10784550256,
-        "VirtualSize": 10784550256,
+        "Size": 6062847393,
+        "VirtualSize": 6062847393,
         "GraphDriver": {
             "Data": null,
             "Name": "btrfs"
@@ -176,26 +123,23 @@
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
                 "sha256:278cc19db7112d9ad77d1e2732c2995e6c17d65c3986ec731d6c80e76f8dd7a1",
                 "sha256:cee974a12d2b4dc332c4895895e4b94f6a11be2bcca096277607f7f20a82e4b6",
-                "sha256:392d385e9d63ecc515d80d0763f00ead46acb58fc7a2c8f063131c67914f4ba6",
-                "sha256:c7343649b06eb3365279b8c8b232f1298bdeb78859b0ba115abe31bb64ed8f6c",
-                "sha256:b5d57a01dfbf52591c9f4400313da12b094b23e4261d298de86f02ccf3dd2804",
-                "sha256:c728f6ff8a1fc535b5b7dd3aa605fb1e36c75cd63e9b44c7612303dd438de50c",
-                "sha256:27f717cda5eaef3367e26a222c5398af7b2e8ca17e12028313045b192b21526c",
-                "sha256:0ecf62f2844f38650300732584be10792cc817f35dbcc9ad006d86ef1ff7c56c",
-                "sha256:377b5b691a2fffe4566134c6ca2ae321a7cf06b59af73b00ac96ee3a582f25e2",
-                "sha256:95d454f5e79430f36093a629a73f2ed256fd5c5e43cffb7c6a92cef58edf165c",
-                "sha256:5affe277be8454cdd7526a5b6152847f95a14b6f7a0ffb7d142fbd63f5bacd2a",
-                "sha256:4d150b215a1f228953befb6c8ef4d2f1bb9af22f38c0171a20193717f89467c3",
-                "sha256:99644791696ecae768279339069bebc13dbc6e6f21971094ea16cd3e6c512eb3",
-                "sha256:c30489c25f8d572fec5745faf10ae83961c4ebdd608b4644fc12901424889bd7",
-                "sha256:c512e81e8603a839977d14789bc08687123d9ff880dce3e5b93c1224594f503d",
-                "sha256:5ee93e21d64b7bbbf8656686b839b67ce278b75c9c648ec33a84e8d734bb2764",
-                "sha256:a2f53d7fbaa1c657cde3a700a588e0245b3572aa43eba4e1920fd2f1c73fa0b4",
-                "sha256:dd89a96e6b814fb4a9668f5a531ad85d95820b1231a74d8d39c1c085042ab4e9"
+                "sha256:236ca2fc529c4b46eecf879241b5d0296f4d831d3d11ff1b725f7377049eaab4",
+                "sha256:f01b385cf4a00d4575c90418133059871550dcd88cb349c1f2288f9bbeb3587b",
+                "sha256:3a98387bb81e10b3d2c8a286ac04d128c02a9d7dbe0ac6e1d6a8eafc5ae167a3",
+                "sha256:211c5d5b054539638580b22bef3e453b6be097f9c7aafe55ea3bff47529da87f",
+                "sha256:61afc4fd0d4e80f14b0a225e3cff73ff66781c5638ca79695331af2aa2005a2c",
+                "sha256:c49fcddd590ac32afe4554daf422a780247dbe9e726a25f195a473e7523d1878",
+                "sha256:a0dc350bf2bdc7d12011801f32a88c6a5efae34f1c66fc4aae76711f0fe9f2df",
+                "sha256:5d131836a4aeef8ec168cb444b0e138968d6d4e6b84df0310a5c3fce9e6481ed",
+                "sha256:98f9548542b0e605cfac01c814fcba58e3cdfe9b5423f2f47e38f09f4651b196",
+                "sha256:1e9236abce3796bbaf72eb9df560804732f90e10f87c3b1964cf355e0efd13ea",
+                "sha256:59fd947911e2e9fdeaf34f90275bdf022ed3c30674341052fe0a0097817134c2",
+                "sha256:ddb3ad80b5057a39a022cf24580c305f1b29f1732f6723058edfcca1daff5b24",
+                "sha256:58787c49b89972282daacd47a272503e4ab942e71924084531ccb10654460ff1"
             ]
         },
         "Metadata": {
-            "LastTagTime": "2022-10-05T11:14:12.030352833-04:00"
+            "LastTagTime": "0001-01-01T00:00:00Z"
         }
     }
 ]

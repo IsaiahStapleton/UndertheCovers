@@ -1,85 +1,34 @@
 [
     {
-        "Id": "sha256:003e0d8ce27196bf893aa7876199efc2fd1b063ec54d6c2fe76505217e0f481f",
+        "Id": "sha256:ddecbbf46a5b40e7561780c7f72969029e523bc18d06f18e3be4651823f9d2fe",
         "RepoTags": [
-            "quay.io/rh_ee_adhayala/ucsls:stable-base"
+            "quay.io/isaiahstapleton/base:stable-local"
         ],
         "RepoDigests": [],
-        "Parent": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
-        "Comment": "",
-        "Created": "2022-10-05T03:11:09.631073317Z",
-        "Container": "48784556b193d5eddd6bcce9f04dd8fdd1aa020bc78307bb066edf5b48de2ee2",
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2023-02-27T15:31:13.215637805-05:00",
+        "Container": "",
         "ContainerConfig": {
-            "Hostname": "48784556b193",
+            "Hostname": "",
             "Domainname": "",
-            "User": "jovyan",
+            "User": "",
             "AttachStdin": false,
             "AttachStdout": false,
             "AttachStderr": false,
-            "ExposedPorts": {
-                "8888/tcp": {}
-            },
             "Tty": false,
             "OpenStdin": false,
             "StdinOnce": false,
-            "Env": [
-                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-                "DEBIAN_FRONTEND=noninteractive",
-                "CONDA_DIR=/opt/conda",
-                "SHELL=/bin/bash",
-                "NB_USER=jovyan",
-                "NB_UID=1000700000",
-                "NB_GID=100",
-                "LC_ALL=en_US.UTF-8",
-                "LANG=en_US.UTF-8",
-                "LANGUAGE=en_US.UTF-8",
-                "HOME=/home/jovyan",
-                "XDG_CACHE_HOME=/home/jovyan/.cache/",
-                "OPE_UID=1000700000",
-                "OPE_GID=0",
-                "OPE_GROUP=root",
-                "NB_GROUP=root",
-                "USER=jovyan"
-            ],
-            "Cmd": [
-                "/bin/bash",
-                "-o",
-                "pipefail",
-                "-c",
-                "#(nop) ",
-                "USER jovyan"
-            ],
-            "Healthcheck": {
-                "Test": [
-                    "CMD-SHELL",
-                    "wget -O- --no-verbose --tries=1 --no-check-certificate     http${GEN_CERT:+s}://localhost:8888${JUPYTERHUB_SERVICE_PREFIX:-/}api || exit 1"
-                ],
-                "Interval": 15000000000,
-                "Timeout": 3000000000,
-                "StartPeriod": 5000000000,
-                "Retries": 3
-            },
-            "ArgsEscaped": true,
-            "Image": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
             "Volumes": null,
-            "WorkingDir": "/home/jovyan",
-            "Entrypoint": [
-                "tini",
-                "-g",
-                "--"
-            ],
+            "WorkingDir": "",
+            "Entrypoint": null,
             "OnBuild": null,
-            "Labels": {
-                "maintainer": "Open Education <opeffort@gmail.com>"
-            },
-            "Shell": [
-                "/bin/bash",
-                "-o",
-                "pipefail",
-                "-c"
-            ]
+            "Labels": null
         },
-        "DockerVersion": "20.10.18",
+        "DockerVersion": "",
         "Author": "",
         "Config": {
             "Hostname": "",
@@ -100,14 +49,14 @@
                 "CONDA_DIR=/opt/conda",
                 "SHELL=/bin/bash",
                 "NB_USER=jovyan",
-                "NB_UID=1000700000",
-                "NB_GID=100",
+                "NB_UID=1000",
+                "NB_GID=0",
                 "LC_ALL=en_US.UTF-8",
                 "LANG=en_US.UTF-8",
                 "LANGUAGE=en_US.UTF-8",
                 "HOME=/home/jovyan",
                 "XDG_CACHE_HOME=/home/jovyan/.cache/",
-                "OPE_UID=1000700000",
+                "OPE_UID=1000",
                 "OPE_GID=0",
                 "OPE_GROUP=root",
                 "NB_GROUP=root",
@@ -127,7 +76,7 @@
                 "Retries": 3
             },
             "ArgsEscaped": true,
-            "Image": "sha256:72eb602ae93fe1eda4f1f851dc8db9b1ced5cf81b0f690dd5ec88b9125835b7e",
+            "Image": "",
             "Volumes": null,
             "WorkingDir": "/home/jovyan",
             "Entrypoint": [
@@ -148,8 +97,8 @@
         },
         "Architecture": "amd64",
         "Os": "linux",
-        "Size": 10784550256,
-        "VirtualSize": 10784550256,
+        "Size": 7153959763,
+        "VirtualSize": 7153959763,
         "GraphDriver": {
             "Data": null,
             "Name": "btrfs"
@@ -173,26 +122,24 @@
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
                 "sha256:278cc19db7112d9ad77d1e2732c2995e6c17d65c3986ec731d6c80e76f8dd7a1",
                 "sha256:cee974a12d2b4dc332c4895895e4b94f6a11be2bcca096277607f7f20a82e4b6",
-                "sha256:392d385e9d63ecc515d80d0763f00ead46acb58fc7a2c8f063131c67914f4ba6",
-                "sha256:c7343649b06eb3365279b8c8b232f1298bdeb78859b0ba115abe31bb64ed8f6c",
-                "sha256:b5d57a01dfbf52591c9f4400313da12b094b23e4261d298de86f02ccf3dd2804",
-                "sha256:c728f6ff8a1fc535b5b7dd3aa605fb1e36c75cd63e9b44c7612303dd438de50c",
-                "sha256:27f717cda5eaef3367e26a222c5398af7b2e8ca17e12028313045b192b21526c",
-                "sha256:0ecf62f2844f38650300732584be10792cc817f35dbcc9ad006d86ef1ff7c56c",
-                "sha256:377b5b691a2fffe4566134c6ca2ae321a7cf06b59af73b00ac96ee3a582f25e2",
-                "sha256:95d454f5e79430f36093a629a73f2ed256fd5c5e43cffb7c6a92cef58edf165c",
-                "sha256:5affe277be8454cdd7526a5b6152847f95a14b6f7a0ffb7d142fbd63f5bacd2a",
-                "sha256:4d150b215a1f228953befb6c8ef4d2f1bb9af22f38c0171a20193717f89467c3",
-                "sha256:99644791696ecae768279339069bebc13dbc6e6f21971094ea16cd3e6c512eb3",
-                "sha256:c30489c25f8d572fec5745faf10ae83961c4ebdd608b4644fc12901424889bd7",
-                "sha256:c512e81e8603a839977d14789bc08687123d9ff880dce3e5b93c1224594f503d",
-                "sha256:5ee93e21d64b7bbbf8656686b839b67ce278b75c9c648ec33a84e8d734bb2764",
-                "sha256:a2f53d7fbaa1c657cde3a700a588e0245b3572aa43eba4e1920fd2f1c73fa0b4",
-                "sha256:dd89a96e6b814fb4a9668f5a531ad85d95820b1231a74d8d39c1c085042ab4e9"
+                "sha256:fa9c93b9a9300d1116d1058a59ecf884f29406ed8250f70a55a31dbbe5f99091",
+                "sha256:e8e349f338acb8bb851ed23f5644a4654d10f681c7aba4642b98098b15f8fbf3",
+                "sha256:2a44b2363902ab8c877bf01a1f572d6a745f967deb87e4520597e497203a566f",
+                "sha256:d3fc40a78c48ccf87160f442ceffae19f0940d8f397dbe6c525ecbe0bfb9102f",
+                "sha256:3915d21a44430b93d33f48b71d5fce103d1143956129ba14102d99fde01d44a7",
+                "sha256:c578be23045a479bea68473898c0caf81cc1f1c91cef98c167a30b5585f7a4db",
+                "sha256:882c6157ec12e66faf927c01cb064e5c8558ff16086b4e2ec1ff74691e05925f",
+                "sha256:06610d23b1530921acff3b5e116c4cef49757a892c8bf76e6b7f721b8d258b67",
+                "sha256:f51553897e398b4e46ce59f071f32efe930dee7cda1e2fe85c514b540e5a3439",
+                "sha256:30c09dab35892cdcdb9f34a44ac058491eee02af2668c5b8e58614d275b4fc28",
+                "sha256:1e42b86af944c7f72be198484d04a2a3cf05d6424bf3a02b050f4e28a8075f59",
+                "sha256:2f451a47c7c26b20d365a5d318ba67a4f91863417f60f3f1ac35699c83a0d16a",
+                "sha256:5dd5affe76e36148470455c5864b7ee60cb4dfd4e8c67506cbf293a892071c30",
+                "sha256:cb638d231261bf34d948b025fdb6f63766883df21f38db20ee75893b7941b3ac"
             ]
         },
         "Metadata": {
-            "LastTagTime": "2022-10-04T23:11:14.739457722-04:00"
+            "LastTagTime": "0001-01-01T00:00:00Z"
         }
     }
 ]
