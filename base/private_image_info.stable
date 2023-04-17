@@ -1,14 +1,14 @@
 [
     {
-        "Id": "sha256:25fa8db52fb1e7142dab34c12b90c3b80fad6a5625ffa6262cd56e9137a02b3b",
+        "Id": "sha256:638385c3eac85e1ef13898dfb58443b1440f42288224f9af9fc01c7c29bd19eb",
         "RepoTags": [
-            "quay.io/isaiahstapleton/base:stable-test24",
-            "quay.io/isaiahstapleton/base:stable-test25"
+            "quay.io/isaiahstapleton/base:stable-test27",
+            "quay.io/rh-ee-istaplet/underthecovers-minimal:stable-test1"
         ],
         "RepoDigests": [],
         "Parent": "",
         "Comment": "buildkit.dockerfile.v0",
-        "Created": "2023-03-28T18:29:14.349436189-04:00",
+        "Created": "2023-04-10T14:04:45.391975269-04:00",
         "Container": "",
         "ContainerConfig": {
             "Hostname": "",
@@ -64,7 +64,9 @@
                 "USER=jovyan"
             ],
             "Cmd": [
-                "start-notebook.sh"
+                "/bin/bash",
+                "-c",
+                "cd /home/jovyan ; start-notebook.sh"
             ],
             "Healthcheck": {
                 "Test": [
@@ -87,7 +89,7 @@
             ],
             "OnBuild": null,
             "Labels": {
-                "maintainer": "Open Education <opeffort@gmail.com>"
+                "maintainer": "Jupyter Project <jupyter@googlegroups.com>"
             },
             "Shell": [
                 "/bin/bash",
@@ -98,8 +100,8 @@
         },
         "Architecture": "amd64",
         "Os": "linux",
-        "Size": 6062847393,
-        "VirtualSize": 6062847393,
+        "Size": 5566923797,
+        "VirtualSize": 5566923797,
         "GraphDriver": {
             "Data": null,
             "Name": "btrfs"
@@ -123,19 +125,19 @@
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
                 "sha256:278cc19db7112d9ad77d1e2732c2995e6c17d65c3986ec731d6c80e76f8dd7a1",
                 "sha256:cee974a12d2b4dc332c4895895e4b94f6a11be2bcca096277607f7f20a82e4b6",
-                "sha256:236ca2fc529c4b46eecf879241b5d0296f4d831d3d11ff1b725f7377049eaab4",
-                "sha256:f01b385cf4a00d4575c90418133059871550dcd88cb349c1f2288f9bbeb3587b",
-                "sha256:3a98387bb81e10b3d2c8a286ac04d128c02a9d7dbe0ac6e1d6a8eafc5ae167a3",
-                "sha256:211c5d5b054539638580b22bef3e453b6be097f9c7aafe55ea3bff47529da87f",
-                "sha256:61afc4fd0d4e80f14b0a225e3cff73ff66781c5638ca79695331af2aa2005a2c",
-                "sha256:c49fcddd590ac32afe4554daf422a780247dbe9e726a25f195a473e7523d1878",
-                "sha256:a0dc350bf2bdc7d12011801f32a88c6a5efae34f1c66fc4aae76711f0fe9f2df",
-                "sha256:5d131836a4aeef8ec168cb444b0e138968d6d4e6b84df0310a5c3fce9e6481ed",
-                "sha256:98f9548542b0e605cfac01c814fcba58e3cdfe9b5423f2f47e38f09f4651b196",
-                "sha256:1e9236abce3796bbaf72eb9df560804732f90e10f87c3b1964cf355e0efd13ea",
-                "sha256:59fd947911e2e9fdeaf34f90275bdf022ed3c30674341052fe0a0097817134c2",
-                "sha256:ddb3ad80b5057a39a022cf24580c305f1b29f1732f6723058edfcca1daff5b24",
-                "sha256:58787c49b89972282daacd47a272503e4ab942e71924084531ccb10654460ff1"
+                "sha256:7190ac5779838077bf4527f0a61c799117a52c581cfb05fc4d0ac85abbb0966e",
+                "sha256:749c6ddabcec4b0c09f8501479b89aa3faab07f93188c064d4e048194c1ca6b7",
+                "sha256:e61f38bfe047b67a6eb8bff343fbe2db5652865688fd692b30508251048d710f",
+                "sha256:c769810766ad870f353648cf00411925413ad75d2787ab01939d3e987daae3bb",
+                "sha256:e525d8c603dc660e9615757573da57f2fd4e71f61ac7dcf62c44c36244deea6a",
+                "sha256:45ac55e3831bb00be3ecf29d7aee81b6ed1d1155b776ec43da142ac2a5b3a4ea",
+                "sha256:ccda30f5459725892c2de0463dbe2c6cd1087957395c7d67920229056e228eba",
+                "sha256:ff35b1245f9d48d183378650aec892d36a959a5cf24c4de8f37982d0829b4937",
+                "sha256:ca519959222daa64fa5c7383cbb8fa63474c6a1359e9faa0d6acc070306d8f71",
+                "sha256:c31fba471f015b631c4eebb45d665df8198d1d482dc6cd19ae5a01273486548f",
+                "sha256:ad5e95d25e733024603c6cd6f6faecaa3a13f9068c947a0148c66d5223c45e2f",
+                "sha256:9d3014cb64c2b64e1651f1af19e8cbe0f6dbb973a4f54ab9568ecac6786426c8",
+                "sha256:c4c0eaea6809f363e227fa2fd913628743158c4058a57d6eface8df444cd5019"
             ]
         },
         "Metadata": {
